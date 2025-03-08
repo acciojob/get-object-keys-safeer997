@@ -1,13 +1,10 @@
-// Create the student object
+// Create the student object with a method
 const student = {
   name: "John",
+  getKeys() {
+    return Object.keys(this);
+  }
 };
 
-// Function to get all keys from the object
-function getKeys(obj) {
-  return Object.keys(obj);
-}
-
 // Attach to window for Cypress
-window.getKeys = getKeys;
 window.student = student;
