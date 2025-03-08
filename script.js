@@ -8,7 +8,6 @@ function getKeys(obj) {
   return Object.keys(obj);
 }
 
-// Export the function if required for Cypress testing (if running in Node.js)
-if (typeof module !== "undefined") {
-  module.exports = { student, getKeys };
-}
+// Attach to window for Cypress
+window.getKeys = getKeys;
+window.student = student;
